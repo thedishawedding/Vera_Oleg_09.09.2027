@@ -1,0 +1,80 @@
+.hero {
+  --hero-brown: #5b3f2c;
+  --hero-text: #46321f;
+  /* Золото рамки на фоновой картинке */
+  --hero-gold: #a38658;
+
+  position: relative;
+  aspect-ratio: 736 / 1104;
+  background: url("../imgs/hero_bg.jpg") top center / 100% auto no-repeat;
+  color: var(--hero-text);
+}
+
+/* Колонка текста по центру золотой рамки: она смещена вправо от веточек слева */
+.hero__content {
+  position: absolute;
+  top: 17.5%;
+  left: 24vw;
+  right: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__caps {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 3.9vw;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.hero__caps--small {
+  font-size: 3.5vw;
+}
+
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 3vw 0 0;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  color: var(--hero-brown);
+}
+
+.hero__name {
+  font-size: 14.5vw;
+  line-height: 1;
+}
+
+/* «и» между тонкими линиями, как в макете */
+.hero__amp {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  width: 100%;
+  font-size: 8vw;
+  line-height: 1;
+}
+
+.hero__amp::before,
+.hero__amp::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--hero-gold);
+}
+
+.hero__date {
+  margin: 6vw 0 8vw;
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: 6.4vw;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  font-variant-numeric: lining-nums;
+}

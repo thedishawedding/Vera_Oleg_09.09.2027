@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 48">
+  <defs>
+    <radialGradient id="petal-body" cx="50%" cy="38%" r="68%">
+      <stop offset="0" stop-color="#fffdf9" />
+      <stop offset="0.65" stop-color="#f8eee5" />
+      <stop offset="1" stop-color="#ead8c9" />
+    </radialGradient>
+    <linearGradient id="petal-base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.55" stop-color="#f3dccf" stop-opacity="0" />
+      <stop offset="1" stop-color="#e9cbbb" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+  <path
+    d="M20 46 C8 40 2 28 3 17 C4 8 11 3 17 5 C19 6 20 8 20 8 C20 8 21 6 23 5 C29 3 36 8 37 17 C38 28 32 40 20 46 Z"
+    fill="url(#petal-body)"
+    stroke="#dcc5b3"
+    stroke-width="0.6"
+  />
+  <path
+    d="M20 46 C8 40 2 28 3 17 C4 8 11 3 17 5 C19 6 20 8 20 8 C20 8 21 6 23 5 C29 3 36 8 37 17 C38 28 32 40 20 46 Z"
+    fill="url(#petal-base)"
+  />
+  <path
+    d="M20 43 C19 32 19 21 20 10"
+    fill="none"
+    stroke="#e4cfbf"
+    stroke-width="0.5"
+    stroke-linecap="round"
+  />
+</svg>

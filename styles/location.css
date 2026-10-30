@@ -1,0 +1,84 @@
+.location {
+  --location-brown: #5b3f2c;
+  --location-text: #46321f;
+  --location-gold: #a38658;
+  --location-paper: #efe6d9;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Секция ровно по размеру картинки (735×1105), текст вверху поверх фото */
+  aspect-ratio: 735 / 1105;
+  padding: 20vw 8vw 0;
+  /* Сверху фото коротко проступает из цвета нижнего края бумаги первой
+     секции. Мягкое светлое пятно за текстом помогает ему читаться на листве,
+     а остальное фото остаётся чётким */
+  background:
+    linear-gradient(to bottom, #e1d3c4, rgb(225 211 196 / 0) 8%) no-repeat,
+    radial-gradient(
+        ellipse 62% 30% at 50% 26%,
+        rgb(239 230 217 / 0.85) 40%,
+        rgb(239 230 217 / 0) 100%
+      )
+      no-repeat,
+    url("../imgs/location_bg.jpg") top center / 100% auto no-repeat,
+    var(--location-paper);
+  color: var(--location-text);
+  text-align: center;
+}
+
+.location__title {
+  margin: 0 0 6vw;
+  font-family: "Great Vibes", cursive;
+  font-size: 15vw;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--location-brown);
+}
+
+.location__caps {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 3.9vw;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.location__venue {
+  margin: 1vw 0 4vw;
+  font-family: "Great Vibes", cursive;
+  font-size: 11vw;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--location-brown);
+}
+
+/* Тонкая золотая черта между названием усадьбы и адресом */
+.location__divider {
+  width: 22vw;
+  height: 1px;
+  margin: 0 0 4vw;
+  border: 0;
+  background: var(--location-gold);
+}
+
+.location__link {
+  margin-top: 8vw;
+  padding: 3vw 8vw;
+  border-radius: 999px;
+  background: var(--location-brown);
+  color: var(--location-paper);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 3.6vw;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.location__link:active {
+  background: var(--location-text);
+}

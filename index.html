@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вера и Олег приглашают Вас на свадьбу</title>
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/hero.css" />
+    <link rel="stylesheet" href="./styles/location.css" />
+    <link rel="stylesheet" href="./styles/program.css" />
+    <link rel="stylesheet" href="./styles/dresscode.css" />
+    <link rel="stylesheet" href="./styles/wishes.css" />
+    <link rel="stylesheet" href="./styles/rsvp.css" />
+    <link rel="stylesheet" href="./styles/reveal.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="./scripts/reveal.js" defer></script>
+    <script src="./scripts/rsvp.js" defer></script>
+  </head>
+  <body>
+    <div class="desktop-notice">
+      Пожалуйста, откройте приглашение на телефоне
+    </div>
+
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <p class="hero__caps">
+            Приглашаем<br />
+            на&nbsp;нашу свадьбу
+          </p>
+          <h1 class="hero__title">
+            <span class="hero__name">Вера</span>
+            <span class="hero__amp">и</span>
+            <span class="hero__name">Олег</span>
+          </h1>
+          <p class="hero__date">09.09.2027</p>
+          <p class="hero__caps hero__caps--small">
+            Будем счастливы<br />
+            разделить этот<br />
+            особенный день<br />
+            вместе с&nbsp;вами
+          </p>
+        </div>
+      </section>
+
+      <section class="location">
+        <h2 class="location__title">Локация</h2>
+        <p class="location__caps">Усадьба</p>
+        <p class="location__venue">«Бублики»</p>
+        <hr class="location__divider" />
+        <p class="location__caps">
+          Деревня Шелути,<br />
+          у&nbsp;реки Гавья
+        </p>
+        <a
+          class="location__link"
+          href="https://yandex.ru/maps/-/CXRibBp6"
+          target="_blank"
+          rel="noopener"
+          >Посмотреть на&nbsp;карте</a
+        >
+      </section>
+
+      <section class="program">
+        <!-- Отрицательная задержка: лепестки уже в полёте, когда секция видна -->
+        <div class="program__petals" aria-hidden="true">
+          <div
+            class="program__petal"
+            style="--top: 4%; --size: 6vw; --duration: 12s; --delay: -2s"
+          >
+            <span><img src="./imgs/petal.svg" alt="" /></span>
+          </div>
+          <div
+            class="program__petal program__petal--far"
+            style="--top: 12%; --size: 4vw; --duration: 17s; --delay: -9s"
+          >
+            <span><img src="./imgs/petal.svg" alt="" /></span>
+          </div>
+          <div
+            class="program__petal"
+            style="--top: 22%; --size: 5.5vw; --duration: 14s; --delay: -6s"
+          >
+            <span><img src="./imgs/petal.svg" alt="" /></span>
+          </div>
+          <div
+            class="program__petal program__petal--far"
+            style="--top: 32%; --size: 3.5vw; --duration: 19s; --delay: -14s"
+          >
+            <span><img src="./imgs/petal.svg" alt="" /></span>
+          </div>
+          <div
+            class="program__petal"
+            style="--top: 42%; --size: 7vw; --duration: 11s; --delay: -4s"
+          >
+            <span><img src="./imgs/petal.svg" alt="" /></span>
+          </div>
+          <div
+            class="program__petal program__petal--far"
+            style="--top: 52%; --size: 4.5vw; --duration: 16s; --delay: -1s"
+          >
+            <span><img src="./imgs/petal.svg" alt="" /></span>
+          </div>
+          <div
+            class="program__petal"
+            style="--top: 62%; --size: 6vw; --duration: 13s; --delay: -8s"
+          >
+            <span><img src="./imgs/petal.svg" alt="" /></span>
+          </div>
+          <div
+            class="program__petal program__petal--far"
+            style="--top: 72%; --size: 4vw; --duration: 18s; --delay: -5s"
+          >
+            <span><img src="./imgs/petal.svg" alt="" /></span>
+          </div>
+          <div
+            class="program__petal"
+            style="--top: 82%; --size: 6.5vw; --duration: 12.5s; --delay: -10s"
+          >
+            <span><img src="./imgs/petal.svg" alt="" /></span>
+          </div>
+          <div
+            class="program__petal program__petal--far"
+            style="--top: 90%; --size: 4vw; --duration: 20s; --delay: -12s"
+          >
+            <span><img src="./imgs/petal.svg" alt="" /></span>
+          </div>
+        </div>
+
+        <h2 class="program__title">Программа</h2>
+        <ol class="program__list">
+          <li class="program__item">
+            <span class="program__time">15:30</span>
+            <span class="program__name">Сбор гостей</span>
+          </li>
+          <li class="program__item">
+            <span class="program__time">16:00</span>
+            <span class="program__name">Фуршет</span>
+          </li>
+          <li class="program__item">
+            <span class="program__time">16:30</span>
+            <span class="program__name">Торжественная церемония</span>
+          </li>
+          <li class="program__item">
+            <span class="program__time">17:00</span>
+            <span class="program__name">Банкет</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="dresscode">
+        <div class="dresscode__content">
+          <h2 class="dresscode__title">Дресс-код</h2>
+          <p class="dresscode__text">
+            Нам будет приятно, если вы поддержите цветовую гамму нашего
+            праздника
+          </p>
+
+          <ul class="dresscode__palette">
+            <li
+              class="dresscode__color"
+              style="--swatch: #7a5540; --sheen-delay: 0s; --silk-pos: 0% 0%"
+            >
+              Молочный шоколад
+            </li>
+            <li
+              class="dresscode__color"
+              style="
+                --swatch: #a5a283;
+                --sheen-delay: -1.2s;
+                --silk-pos: 60% 20%;
+              "
+            >
+              Нежный хаки
+            </li>
+            <li
+              class="dresscode__color"
+              style="
+                --swatch: #d6c0a2;
+                --sheen-delay: -2.4s;
+                --silk-pos: 20% 80%;
+              "
+            >
+              Беж
+            </li>
+            <li
+              class="dresscode__color"
+              style="
+                --swatch: #ecdcc0;
+                --sheen-delay: -3.6s;
+                --silk-pos: 90% 60%;
+              "
+            >
+              Шампань
+            </li>
+            <li
+              class="dresscode__color"
+              style="
+                --swatch: #ddb7ae;
+                --sheen-delay: -4.8s;
+                --silk-pos: 40% 40%;
+              "
+            >
+              Пудрово-розовый
+            </li>
+          </ul>
+
+          <p class="dresscode__text">
+            Просим воздержаться от&nbsp;ярких и&nbsp;неоновых оттенков.
+            Пожалуйста, оставьте белый цвет для&nbsp;невесты
+          </p>
+        </div>
+      </section>
+
+      <section class="wishes">
+        <h2 class="wishes__title">Пожелание</h2>
+        <p class="wishes__accent">
+          Ваше присутствие&nbsp;&ndash; главный подарок!
+        </p>
+        <hr class="wishes__divider" />
+        <p class="wishes__text">
+          Пожалуйста, не&nbsp;дарите цветы: в&nbsp;свадебной суете они,
+          к&nbsp;сожалению, не&nbsp;проживут долго.
+        </p>
+        <p class="wishes__text">
+          Приятным комплиментом для&nbsp;нас вместо букета будет сертификат
+          в&nbsp;Ваш любимый магазин либо заведение.
+        </p>
+        <hr class="wishes__divider" />
+        <p class="wishes__text">
+          Мы безумно любим ваших детей, но&nbsp;в&nbsp;этот день алкоголь будет
+          литься рекой, а&nbsp;музыка будет слишком громкой.
+        </p>
+        <p class="wishes__text wishes__text--final">
+          Давайте оставим детей дома и&nbsp;зажжём по-взрослому!
+        </p>
+      </section>
+      <section class="rsvp">
+        <div class="rsvp__card">
+          <h2 class="rsvp__title">Анкета</h2>
+          <p class="rsvp__intro">
+            Пожалуйста, подтверди своё присутствие за&nbsp;месяц до&nbsp;свадьбы
+          </p>
+
+          <form class="rsvp__form" novalidate>
+            <div class="rsvp__field">
+              <label class="rsvp__question" for="rsvp-name">ФИО</label>
+              <input
+                class="rsvp__input"
+                id="rsvp-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <fieldset class="rsvp__field">
+              <legend class="rsvp__question">Сможете ли вы быть?</legend>
+              <label class="rsvp__option">
+                <input type="radio" name="attendance" value="yes" required />
+                Да, с&nbsp;удовольствием!
+              </label>
+              <label class="rsvp__option">
+                <input type="radio" name="attendance" value="no" />
+                К&nbsp;сожалению, не&nbsp;смогу
+              </label>
+            </fieldset>
+
+            <!-- Вопросы ниже показываются, только если гость придёт -->
+            <div class="rsvp__attending" hidden>
+              <fieldset class="rsvp__field">
+                <legend class="rsvp__question">Вы будете</legend>
+                <label class="rsvp__option">
+                  <input type="radio" name="company" value="alone" />
+                  Один / одна
+                </label>
+                <label class="rsvp__option">
+                  <input type="radio" name="company" value="plus-one" />
+                  Со&nbsp;спутником (+1)
+                </label>
+              </fieldset>
+
+              <div class="rsvp__field rsvp__partner" hidden>
+                <label class="rsvp__question" for="rsvp-partner"
+                  >ФИО спутника</label
+                >
+                <input
+                  class="rsvp__input"
+                  id="rsvp-partner"
+                  name="partner"
+                  type="text"
+                  required
+                  disabled
+                />
+              </div>
+
+              <fieldset class="rsvp__field">
+                <legend class="rsvp__question">Нужен ли вам трансфер?</legend>
+                <label class="rsvp__option">
+                  <input type="radio" name="transfer" value="both-ways" />
+                  Туда и&nbsp;обратно
+                </label>
+                <label class="rsvp__option">
+                  <input type="radio" name="transfer" value="there" />
+                  Только туда
+                </label>
+                <label class="rsvp__option">
+                  <input type="radio" name="transfer" value="back" />
+                  Только обратно
+                </label>
+                <label class="rsvp__option">
+                  <input type="radio" name="transfer" value="none" />
+                  Доберусь сам(а)
+                </label>
+              </fieldset>
+            </div>
+
+            <div class="rsvp__field">
+              <label class="rsvp__question" for="rsvp-message">
+                Пожелания или вопросы
+              </label>
+              <textarea
+                class="rsvp__input rsvp__textarea"
+                id="rsvp-message"
+                name="message"
+                rows="3"
+                placeholder="Аллергии, любимая песня для танцпола — всё, что нам стоит знать"
+              ></textarea>
+            </div>
+
+            <p class="rsvp__error" role="alert" hidden></p>
+            <button class="rsvp__submit" type="submit">Отправить</button>
+            <p class="rsvp__thanks" role="status" hidden>
+              Спасибо! Ваш ответ получен.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

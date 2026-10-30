@@ -1,0 +1,151 @@
+.program {
+  --program-brown: #5b3f2c;
+  --program-text: #46321f;
+  --program-gold: #a38658;
+
+  position: relative;
+  aspect-ratio: 950 / 1280;
+  /* Сверху фон коротко проступает из цвета ковра внизу секции «Локация» */
+  background:
+    linear-gradient(to bottom, #b8aea4, rgb(184 174 164 / 0) 7%) no-repeat,
+    url("../imgs/program_bg.jpg") top center / 100% auto no-repeat,
+    #f6efe6;
+  color: var(--program-text);
+}
+
+/* Заголовок правее букета в левом верхнем углу */
+.program__title {
+  position: absolute;
+  top: 17%;
+  left: 20vw;
+  right: 4vw;
+  margin: 0;
+  font-family: "Great Vibes", cursive;
+  font-size: 15vw;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  color: var(--program-brown);
+}
+
+/* Расписание в светлой зоне между лентой слева и цветами справа */
+.program__list {
+  position: absolute;
+  top: 31%;
+  left: 12vw;
+  right: 20vw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Время слева, событие справа, между ними сквозная золотая черта,
+   как в блоке «Время» на макете */
+.program__item {
+  display: grid;
+  grid-template-columns: 24vw 1fr;
+  align-items: center;
+}
+
+.program__time {
+  padding-right: 4vw;
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: 6vw;
+  letter-spacing: 0.04em;
+  text-align: right;
+  font-variant-numeric: lining-nums;
+}
+
+.program__name {
+  min-height: 8vw;
+  display: flex;
+  align-items: center;
+  padding: 2.5vw 0 2.5vw 4vw;
+  border-left: 1px solid var(--program-gold);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 3.8vw;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Лепестки летят справа налево поверх фона, но под текстом. Каждый
+   лепесток — три слоя: внешний летит по горизонтали, средний покачивается
+   вверх-вниз, картинка кружится. Параметры полёта заданы в style */
+.program__petals {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.program__title,
+.program__list {
+  z-index: 1;
+}
+
+.program__petal {
+  position: absolute;
+  top: var(--top);
+  left: 0;
+  width: var(--size);
+  animation: program-fly var(--duration) linear var(--delay) infinite;
+  will-change: transform;
+}
+
+.program__petal span {
+  display: block;
+  animation: program-sway calc(var(--duration) / 3) ease-in-out var(--delay)
+    infinite alternate;
+}
+
+.program__petal img {
+  display: block;
+  width: 100%;
+  filter: drop-shadow(0 0.5vw 0.6vw rgb(91 63 44 / 0.18));
+  animation: program-spin calc(var(--duration) / 2) linear var(--delay)
+    infinite;
+}
+
+/* Дальние лепестки мельче, бледнее и чуть размыты — так появляется глубина */
+.program__petal--far img {
+  opacity: 0.7;
+  filter: blur(0.5px) drop-shadow(0 0.5vw 0.6vw rgb(91 63 44 / 0.12));
+}
+
+@keyframes program-fly {
+  from {
+    transform: translateX(110vw);
+  }
+  to {
+    transform: translateX(-20vw);
+  }
+}
+
+@keyframes program-sway {
+  from {
+    transform: translateY(-5vw);
+  }
+  to {
+    transform: translateY(5vw);
+  }
+}
+
+@keyframes program-spin {
+  from {
+    transform: rotate(0deg) rotateX(0deg);
+  }
+  50% {
+    transform: rotate(-180deg) rotateX(65deg);
+  }
+  to {
+    transform: rotate(-360deg) rotateX(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .program__petals {
+    display: none;
+  }
+}
