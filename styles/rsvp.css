@@ -10,12 +10,20 @@
   align-items: center;
   min-height: calc(100vw * 1280 / 905);
   padding: 14vw 9vw 40vw;
-  /* Сверху фон коротко проступает из цвета нижнего края секции «Пожелание».
+  /* Сверху фон плавно проступает из общего с секцией «Пожелание» цвета.
      Если форма не помещается в пропорции картинки, она немного
      растягивается по высоте */
   background:
-    linear-gradient(to bottom, #cab8b0, rgb(202 184 176 / 0) 6%) no-repeat,
-    url("../imgs/form_bg.jpg") center / 100% 100% no-repeat,
+    linear-gradient(
+        to bottom,
+        #ebdbcf,
+        rgb(235 219 207 / 0.8) 2.5%,
+        rgb(235 219 207 / 0.45) 5.5%,
+        rgb(235 219 207 / 0.15) 9%,
+        rgb(235 219 207 / 0) 12%
+      )
+      no-repeat,
+    url("../imgs/rsvp_bg.jpg") center / 100% 100% no-repeat,
     var(--rsvp-paper);
   color: var(--rsvp-text);
   font-family: "Cormorant Garamond", Georgia, serif;

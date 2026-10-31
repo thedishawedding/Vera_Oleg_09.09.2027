@@ -5,9 +5,19 @@
 
   position: relative;
   aspect-ratio: 950 / 1280;
-  /* Сверху фон коротко проступает из цвета ковра внизу секции «Локация» */
+  /* Сверху фон коротко проступает из цвета ковра внизу секции «Локация».
+     Снизу фон растворяется в общий с секцией «Дресс-код» цвет */
   background:
     linear-gradient(to bottom, #b8aea4, rgb(184 174 164 / 0) 7%) no-repeat,
+    linear-gradient(
+        to top,
+        #f3e4d7,
+        rgb(243 228 215 / 0.8) 2%,
+        rgb(243 228 215 / 0.4) 4%,
+        rgb(243 228 215 / 0.12) 6%,
+        rgb(243 228 215 / 0) 8%
+      )
+      no-repeat,
     url("../imgs/program_bg.jpg") top center / 100% auto no-repeat,
     #f6efe6;
   color: var(--program-text);
