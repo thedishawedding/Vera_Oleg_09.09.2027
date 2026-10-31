@@ -29,7 +29,10 @@
       )
       no-repeat,
     url("../imgs/dress_code_bg.jpg") top center / 100% auto no-repeat,
-    #f6e2ce;
+    /* Цвет стыка с «Пожеланием»: если Safari при округлении высоты
+       (100vw × 1.5 даёт дробные пиксели) не дотянет картинку до низа,
+       в щели будет тот же цвет, а не светлая полоса */
+    #e2cdbb;
   color: var(--dresscode-text);
   text-align: center;
 }
