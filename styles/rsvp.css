@@ -5,6 +5,12 @@
   --rsvp-paper: #f8efe4;
 
   box-sizing: border-box;
+  /* Высота «Пожелания» (100vw × 1280 / 853) дробная, iOS Safari её
+     округляет, и между секциями просвечивает линия фона страницы.
+     Наезжаем на 1px, а position: relative кладёт «Анкету» поверх
+     (у «Пожелания» он тоже relative, иначе тот перекрыл бы нахлёст) */
+  position: relative;
+  margin-top: -1px;
   display: flex;
   flex-direction: column;
   align-items: center;
